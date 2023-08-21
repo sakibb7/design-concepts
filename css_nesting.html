@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Nesting</title>
+    <style>
+        /* Css Nesting site: & li {
+            &:not(:last-child){
+                border-right: 3px solid yellow;
+            }
+        } */
+
+.css-nesting{
+    font-size: 2rem;
+
+    & ul {
+        color: rgb(0, 254, 59);
+
+        
+    }
+/* This does not work. Don't know why */
+    & li {
+        &:not(:last-child){
+            border-right: 3px solid yellow;
+        }
+    }
+
+    & a {
+        color: rgb(236, 204, 19);
+        padding: 1rem;
+
+        &:hover{
+            color:red
+        }
+        
+    }
+    /* & is not needed for class */
+    .active{
+        color: chartreuse;
+    }
+
+    @media(max-width: 780px){
+        font-size: 1rem;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <section>
+        <!-- CSS Nesting -->
+        <div class="css-nesting">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#" class="active">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

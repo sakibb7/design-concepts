@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Clamp</title>
+
+    <style>
+
+/* Top 10 Advanced CSS Responsive Design Concepts You Should Know 
+site: https://www.youtube.com/watch?v=TUD1AWZVgQ8&ab_channel=WebDevSimplified
+*/
+.font-clamp{
+    text-align: center;
+    font-size:clamp(.75rem, 4.5vw, 10rem)
+}
+
+.clamp-image{
+    width: clamp(5em, 8.5vw, 70em);
+}
+    </style>
+</head>
+<body>
+    <!-- Top 10 Advanced CSS Responsive Design Concepts You Should Know -->
+    <section>
+        <div class="font-clamp">
+            <h1>Hello World!</h1>
+            <img src="./images/profile-pic.png" class="clamp-image" alt="">
+        </div>
+    </section>
+</body>
+</html>

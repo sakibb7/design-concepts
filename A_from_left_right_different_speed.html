@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+    <style>
+        /* CSS Animation */
+
+/* for grandient background animation watch the last part https://www.youtube.com/watch?v=y8-F5-2EIcg&ab_channel=KevinPowell */
+
+
+.translate_animation{
+    padding: 10rem;
+    font-size: 2rem;
+    animation: mymove 1s ease-in;
+    
+}
+
+@keyframes mymove {
+    0%{translate: -100px 0;}
+    100% {translate: 0 0;}
+  }
+
+
+  .different_speed{
+    padding: 1em 2em;
+    background-color: aquamarine;
+    font-size: 1.5rem;
+    transition: transform 1000ms;
+  }
+
+  .different_speed:hover{
+    transform: translateY(-2rem);
+    transition: transform 300ms;
+  }
+    </style>
+</head>
+<body>
+    <!-- CSS Translate animation -->
+
+    <section>
+        <p class="translate_animation">Hello Sakib</p>
+        <button class="different_speed">Differen Speed</button>
+    </section>
+</body>
+</html>

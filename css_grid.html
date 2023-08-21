@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .grid_column {
+        text-align: center;
+      }
+
+      .feature {
+        background-color: aquamarine;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      }
+
+      .feature.reverse {
+        grid-template-areas: "left right";
+      }
+
+      .left {
+        grid-area: right;
+      }
+
+      .child {
+        margin: 20px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid_column">
+      <div class="feature">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+      </div>
+      <div class="feature reverse">
+        <div class="child left">Three</div>
+        <div class="child">Four</div>
+      </div>
+    </div>
+  </body>
+</html>
